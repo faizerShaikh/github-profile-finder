@@ -2,14 +2,18 @@ import React from "react";
 import Spinner from "../layouts/Spinner";
 import User from "./User";
 
-const Users = ({ users, loading }) => {
+const Users = ({ movies, loading }) => {
   if (loading) {
     return <Spinner />;
   } else {
     return (
       <div className='d-flex flex-wrap justify-content-evenly container'>
-        {users.map((user) => (
-          <User key={user.id} user={user} />
+        {movies.map((movie) => (
+          <User
+            key={movie.id}
+            movie={movie}
+            getSimgleMovie={getSingleMovie(id)}
+          />
         ))}
       </div>
     );

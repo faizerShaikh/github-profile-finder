@@ -1,12 +1,12 @@
 import React from "react";
 
-function Navbar() {
+function Navbar({ navIcon, websiteName }) {
   return (
     <nav className='row container py-2'>
       <div className='col-md-6'>
         <h3 className='h3 fs-4 fw-bold light'>
-          <i className='fab fa-github pe-2'> </i>
-          Github Finder
+          <i className={navIcon}> </i>
+          {websiteName}
         </h3>
       </div>
     </nav>

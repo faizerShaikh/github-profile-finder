@@ -2,15 +2,18 @@ import React, { Fragment } from "react";
 import spinner from "./spinner-gif-16.gif";
 const Spinner = () => {
   return (
-    <Fragment>
+    <div
+      className='d-flex justify-content-center align-items-center mx-auto'
+      style={{ width: "90%", height: "90vh" }}
+    >
       <img
         src={spinner}
         alt='spinner gif'
-        width='300'
-        height='300'
-        className='d-block mx-auto'
+        width='150'
+        height='120'
+        className='d-block mx-auto mt-5'
       />
-    </Fragment>
+    </div>
   );
 };
 
